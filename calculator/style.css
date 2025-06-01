@@ -1,0 +1,112 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body with flex column, full height */
+    body {
+      min-height: 100vh;           /* Full viewport height */
+      display: flex;
+      flex-direction: column;      /* Stack children vertically */
+      background: linear-gradient(to right, rgb(1, 32, 33), rgb(255, 255, 255));
+      font-family: 'Roboto', sans-serif;
+      color: white;
+    }
+
+    /* Main content area fills remaining space */
+    .container {
+      flex: 1;                    /* Take all space except footer */
+      display: flex;
+      gap: 100px;
+      padding-right: 60px;
+      width: 90%;
+      max-width: 1200px;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+    }
+
+    /* Your existing styles here */
+    .header {
+      max-width: 500px;
+    }
+    .header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      font-family: 'Montserrat', Thompson;
+      font-size: 40px;
+      color: #cad2d1;
+      text-align: left;
+    }
+    .header p {
+      font-size: 1.2em;
+      font-family: 'Playfair Display', serif;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .logos img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    .calculator {
+      background: rgb(69, 80, 82);
+      border-radius: 20px;
+      padding: 20px;
+      width: 320px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    .display {
+      width: 100%;
+      height: 60px;
+      background: rgb(93, 91, 91);
+      color: #ffffff;
+      font-size: 2em;
+      border: none;
+      border-radius: 12px;
+      text-align: right;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+    button {
+      padding: 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #2a2a2a;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #444;
+    }
+    .operator {
+      background: #ff9500;
+    }
+    .equal {
+      background: #00cc99;
+    }
+    .clear {
+      background: #ff3b30;
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+
+    /* Footer fixed at bottom */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(to right, rgb(1, 32, 33), rgb(255, 255, 255));
+      color: #333;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
